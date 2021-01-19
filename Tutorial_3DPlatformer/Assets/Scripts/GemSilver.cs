@@ -10,7 +10,7 @@ public class GemSilver : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        ScoreBox.GetComponent<Text>().text = "1000";
+        GlobalScore.CurrentScore += 1000;
         CollectSound.Play();
         Destroy(gameObject);
     }
