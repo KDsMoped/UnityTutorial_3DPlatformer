@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FinishLevel : MonoBehaviour
@@ -55,5 +56,9 @@ public class FinishLevel : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         FadeOut.SetActive(true);
+        yield return new WaitForSeconds(2);
+
+        GlobalScore.CurrentScore = 0;
+        SceneManager.LoadScene(RedirectToLevel.NextLevel);
     }
 }

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level001 : MonoBehaviour
+public class Level002 : MonoBehaviour
 {
     public GameObject FadeIn;
 
     void Start()
     {
         FadeIn.SetActive(true);
-        RedirectToLevel.DestinationLevel = 3;
-        RedirectToLevel.NextLevel = 5;
+        RedirectToLevel.DestinationLevel = 5;
+        RedirectToLevel.NextLevel = 6;
         StartCoroutine(FadeOnOff());
     }
 
